@@ -1,0 +1,25 @@
+<nav class="navbar-m">
+
+    <label class="logo">CODO</label>
+    <ul class="text-holder">
+        <li> <a href="#">Home</a> </li>
+        <li> <a href="#">About</a> </li>
+        <li> <a href="#">Community</a> </li>
+        <li> <a href="#">login</a> </li>
+        <li> <a href="#">signin</a> </li>
+        <li>
+            <a href="#"> <i class='bx bx-moon'></i></a>
+        </li>
+    </ul>
+
+    <label id="icon-menu">
+          <i class='bx bx-menu' ></i>
+        </label>
+</nav>
+<script>
+    $(document).ready(function() {
+        $('#icon-menu').click(function() {
+            $('ul').toggleClass('.show');
+        });
+    });
+</script>

@@ -1,25 +1,102 @@
+<!-- navbar starts -->
 <nav class="navbar-m">
 
     <label class="logo">CODO</label>
-    <ul class="text-holder">
-        <li> <a href="#">Home</a> </li>
-        <li> <a href="#">About</a> </li>
-        <li> <a href="#">Community</a> </li>
-        <li> <a href="#">login</a> </li>
-        <li> <a href="#">signin</a> </li>
+    <ul id="nav-bar" class="text-holder ">
+        <li> <a href="# ">path</a> </li>
+        <li> <a href="# ">About</a> </li>
+        <li> <a href="# ">Community</a> </li>
+        <li> <a href="# ">login</a> </li>
+        <li> <a class="getsign" href="#">get started</a> </li>
         <li>
-            <a href="#"> <i class='bx bx-moon'></i></a>
+            <i class='bx bx-moon'></i>
         </li>
     </ul>
 
-    <label id="icon-menu">
-          <i class='bx bx-menu' ></i>
+    <label id="icon-menu" onclick="myMenu()">
+        <i id="close" class='bx bx-menu'></i>
         </label>
 </nav>
+
+
+<!-- navbar ends  -->
+
+<!-- footer starts -->
+
+<div class="footer-m">
+    <div class="box-one">
+
+        <label class=" logo"> CODO </label>
+        <p>
+            High quality coding & software education for everyone
+        </p>
+
+        <ul class="social-box">
+            <li>
+                <a href="#"><i class='bx bxl-github'></i></a>
+            </li>
+            <li>
+                <a href="#"><i class='bx bxl-discord-alt' ></i></a>
+            </li>
+            <li>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+            </li>
+            <li>
+                <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+            </li>
+        </ul>
+        <p class="web-design"> web design by Selva</p>
+    </div>
+
+    <footer>
+        <div class="box-two">
+
+            <h3>Are you bored?</h3>
+            <h6>Let's try and learn something new</h6>
+            <button class=" btn btn-outline-dark btn-sm">Why not?</button>
+        </div>
+        <div class="box-three">
+            <div class="col-lg">
+                <h5 class="text mb-3"> having any question?</h5>
+                <p class="small text-muted">send your queries and feedback <br> to us and get in touch with us .</p>
+                <form action="#">
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="text" placeholder="Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" id="button-addon2" type="button"><i class='bx bxl-telegram' ></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <ul class=" menu-footer ">
+            <li>
+                <a href="# ">| About</a>
+            </li>
+            <li>
+                <a href="# ">| FAQ</a>
+            </li>
+            <li>
+                <a href="# ">| blog</a>
+            </li>
+            <li>
+                <a href="# ">| Terms of use</a>
+            </li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- footer ends  -->
+
+
+
+
+
 <script>
-    $(document).ready(function() {
-        $('#icon-menu').click(function() {
-            $('ul').toggleClass('.show');
-        });
-    });
+    function myMenu() {
+        var element = document.getElementById("nav-bar");
+        element.classList.toggle("show");
+        let icon = document.getElementById("close")
+        icon.classList.toggle("bxs-x-square")
+    }
 </script>

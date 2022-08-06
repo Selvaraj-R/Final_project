@@ -1,24 +1,40 @@
-# README
+# KODO
+ 
+## why am i starting the project again from scratch?
+   I am challenging  myself to recreate my whole project ideas in 7 days without any distraction.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### DAY 1
+ * **Created logo and choosed color theme and   design for my project**
 
-Things you may want to cover:
+  > color theme 
+  >
+  >![color code](app/assets/images/image%20(2).png)
 
-* Ruby version
+  >figma prelook
+  >
+  > **light mode**
+  >![sample](app/assets/images/image%20(4).png)
+  >
+  >**dark mode**
+  >
+  >![darkmode](app/assets/images/image%20(5).png)
+  
+* **created logo and favicon for my project** 
 
-* System dependencies
+> logo 
+> ![logo](app/assets/images/logo.png)
 
-* Configuration
+> favicon 
+> 
+> ![favicon](app/assets/images/favicon.png)
 
-* Database creation
+* **created the project in rails and run a trail in rails server**
 
-* Database initialization
+* created home page and controller started doing my navbar 
 
-* How to run the test suite
+> Day 1 1% of work completed and looking forward to complete atleast 30% work for Day 2
 
-* Services (job queues, cache servers, search engines, etc.)
+ ---
 
-* Deployment instructions
-
-* ...
+ # DAY 2
+ 

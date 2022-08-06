@@ -1,0 +1,23 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    
+    
+ }
+
+a{
+    text-decoration: none !important;
+}
+
+:root{
+    --primary: #0085ff;
+    --secondary: #004F99;  /* LINKED TEXT AND NAVBAR */
+    --tertiary: #003566;
+    --bg: white;
+    --p-text:  #003566;
+    --s-text:  #5D7F9E;
+    --b-p-text: black;
+    --b-s-text: #4d4d4d;
+}
+
+
+

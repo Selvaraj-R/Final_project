@@ -1,2 +1,41 @@
-<h1> HOME</h1>
+<nav class="nav-holder">
+    <div class="container">
+        <div class="navbar-custom">
+            <span class="logo">
+                <%= image_tag("logo.png" ,height: '60px' ) %>
+            </span>
+            <div class="menu-holder">
+                <ul class="nav-item">
+                    <li><a> Courses</a> </li>
+                    <li><a> blog</a> </li>
+                    <li><a> about</a> </li>
+                    <li><a> case study</a> </li>
+                    <li><a> Courses</a> </li>
+                </ul>
+            </div>
 
+            <div class="darkmode-search">
+
+                <div class="darkmode">
+
+                    <i id="moon" class='bx bx-moon'></i>
+                </div>
+
+                <div class="search-box">
+                    <i id="search" class='bx bx-search'></i>
+
+                    <form action="">
+                    <div id ="search-field" class="search-field">
+                    <input type="text" placeholder="search">
+                    <button type="submit" class="btn btn-outline-primary">
+                     <i class='bx bx-search'></i>
+                    </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <%= javascript_pack_tag "Dark_Mode.js" %>

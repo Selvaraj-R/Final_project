@@ -22,6 +22,7 @@
 * **created logo and favicon for my project** 
 
 > logo 
+> 
 > ![logo](app/assets/images/logo.png)
 
 > favicon 
@@ -37,4 +38,9 @@
  ---
 
  # DAY 2
- 
+
+ ***starting my work at 11:00 am***
+
+ It took me 3 hrs to finish a navbar i am doing my work slowly i need to fasten up otherwise i won't be able to finish my work within  6 more days 
+
+

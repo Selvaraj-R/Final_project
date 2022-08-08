@@ -34,10 +34,10 @@
 
                 </div>
             </div>
-            <div class="cr-two">
+            <div class="cr-two" id="course-img">
 
 
-                <%= image_tag("cu.png" ,width:"800px") %>
+                <%= image_tag("cu.png" ,width:"800px" ,) %>
 
 
             </div>
@@ -139,3 +139,24 @@
         </ul>
     </div>
 </section>
+
+
+<script>
+   
+var tog_mode = localStorage.getItem("dark_mode");
+console.log(tog_mode);
+
+var cour = document.getElementById("course-img");
+if (tog_mode == "true") {
+    cour.classList.add("img-d")
+    console.log("working")
+    
+} else {
+    cour.classList.remove("img-d")
+}
+
+</script>
+
+
+
+ 

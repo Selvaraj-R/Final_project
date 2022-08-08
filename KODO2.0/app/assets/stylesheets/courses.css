@@ -72,5 +72,7 @@ div.text-holder-course{
 }
 
 
-
+.img-d{
+    filter: saturate(0);
+}
 

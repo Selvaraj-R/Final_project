@@ -8,6 +8,7 @@ var tog_mode = localStorage.getItem("dark_mode");
 
 if (tog_mode == "true") {
     darkmode();
+    
 } else {
     lightMode();
 }
@@ -16,16 +17,20 @@ if (tog_mode == "true") {
 
 function darkmode() {
     var moon = document.getElementById("moon");
-    moon.classList.add("bx-sun")
-    document.body.classList.add("darkmode")
+    moon.classList.add("bx-sun");
+    document.body.classList.add("darkmode");
     saveInLs("dark_mode", "true");
+    // let course = document.getElementById("course-img");
+    // course.classList.add("img-d");
 
 }
 
+
+
 function lightMode() {
     var moon = document.getElementById("moon");
-    moon.classList.remove("bx-sun")
-    document.body.classList.remove("darkmode")
+    moon.classList.remove("bx-sun");
+    document.body.classList.remove("darkmode");
     saveInLs("dark_mode", "false");
 }
 

@@ -46,7 +46,7 @@
 
    }
 
-   .nav-item li a {
+   .nav-item li .a {
        line-height: 80px;
        font-weight: 500;
        margin: 0 5px;
@@ -54,9 +54,6 @@
        text-transform: capitalize;
    }
 
-   .nav-item li:hover {
-       color: var(--hover);
-   }
 
    .darkmode-search {
        display: flex;
@@ -85,7 +82,7 @@
        align-items: center;
        background-color: var(--bg);
        border: 2px solid var(--primary);
-       border-radius: 6px;
+       border-radius: 50px;
        padding: 2px 5px;
       
        
@@ -113,10 +110,11 @@
    .search-field input {
        color: var(--b-p-text);
        background-color: var(--bg);
-       padding: 0 5px;
+       padding: 0 10px;
        width: 100%;
        height: 40px;
        border: none;
+       border-radius: 30px;
        outline: none;
        margin-right: 5px;
    }

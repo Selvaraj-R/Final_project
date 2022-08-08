@@ -1,16 +1,22 @@
 <nav class="nav-holder">
     <div class="container">
         <div class="navbar-custom">
+            
+            
+            <%= link_to root_path ,class:"link-tag" do  %>
+            
+            
             <span class="logo">
                 <%= image_tag("logo.png" ,height: '60px' ) %>
             </span>
+
+            <% end %>
             <div class="menu-holder">
                 <ul class="nav-item">
-                    <li><a> Courses</a> </li>
-                    <li><a> Mingle</a> </li>
-                    <li><a> case study</a> </li>
-                    <li><a> about</a> </li>
-                    <%# <li><a> Courses</a> </li> %>
+                 <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a">Courses</span>   <% end %> </li>
+                   <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a">Mingle</span>   <% end %> </li>  
+                    <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a">About</span>   <% end %> </li> 
+                 <!-- <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a"></span>   <% end  %> </li> -->
                 </ul>
             </div>
 

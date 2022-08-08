@@ -8,16 +8,16 @@
 
   > color theme 
   >
-  >![color code](/app/assets/images/readme/image%20(2).png)
+  >![color code](/app/assets/images/readme/ct.png)
 
   >figma prelook
   >
   > **light mode**
-  >![sample](/app/assets/images/readme/image%20(4).png))
+  >![sample](/app/assets/images/readme/lm.png))
   >
   >**dark mode**
   >
-  >![darkmode](/app/assets/images/readme/image%20(5).png)
+  >![darkmode](/app/assets/images/readme/dm.png)
   
 * **created logo and favicon for my project** 
 

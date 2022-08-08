@@ -70,7 +70,7 @@ it is better to do something than doing nothing
  >homepage with dark mode and light mode
  >
  >
- >![homepage](/app/assets/images/hom.png)
+ >![homepage](app/assets/images/hom.png)
 
  things i plan to do today is finish coures,overview and content page by today.
 

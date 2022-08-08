@@ -8,16 +8,16 @@
 
   > color theme 
   >
-  >![color code](app/assets/images/image%20(2).png)
+  >![color code](/app/assets/images/readme/image%20(2).png)
 
   >figma prelook
   >
   > **light mode**
-  >![sample](app/assets/images/image%20(4).png)
+  >![sample](/app/assets/images/readme/image%20(4).png))
   >
   >**dark mode**
   >
-  >![darkmode](app/assets/images/image%20(5).png)
+  >![darkmode](/app/assets/images/readme/image%20(5).png)
   
 * **created logo and favicon for my project** 
 
@@ -67,14 +67,23 @@ it is better to do something than doing nothing
 
  * made changes to my home page 
 
- >homepage with dark mode and light mode
+ >**homepage with dark mode and light mode**
  >
  >
- >![homepage](app/assets/images/hom.png)
+ >![homepage](/app/assets/images/readme/hom.png)
 
  things i plan to do today is finish coures,overview and content page by today.
 
 
+ >**about kodo page** 
+>
+>![aboutpage](/app/assets/images/readme/about.png)
 
- **i can i  will**
+
+
+>**courses in main page**
+>
+>
+>![courses](app/assets/images/readme/lc.png)
+
 

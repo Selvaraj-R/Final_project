@@ -106,3 +106,8 @@ body{
 .b-space{
 padding-bottom: 50px;
 }
+
+.line-hr{
+    border: 1px solid var(--primary);
+    background-color: var(--bg);
+}

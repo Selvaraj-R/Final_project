@@ -38,6 +38,10 @@ body{
     --font-text: 1rem;
     --font-header-spacing: 3rem;
     --font-text-spacing: 1.625rem;
+
+    /* cards  */
+    --surface-color: black;
+  --curve: 40;
 }
 
 .darkmode{
@@ -52,7 +56,7 @@ body{
         --p-text:  #003566;
         --s-text:  #5D7F9E;
         --b-p-text: white;
-        --b-s-text: #4d4d4d;
+        --b-s-text: #D7BDCA;
         --p20:#E9F0F6;
          --bg-s: #161616;
     
@@ -82,6 +86,11 @@ body{
     font-weight: 500;
 }
 
+.t-s-header{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 .btn.btn-outline-kodo{
     color: var(--b-p-text);
     border-color: var(--b-p-text) ;
@@ -93,4 +102,7 @@ body{
 
 .blue{
     color: var(--primary);
+}
+.b-space{
+padding-bottom: 50px;
 }

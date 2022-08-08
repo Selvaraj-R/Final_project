@@ -11,7 +11,10 @@ a{
 }
 body{
     background-color: var(--bg);
-    transition: all ease-in-out 0.2s;
+    /* transition: all ease-in-out 0.2s; */
+}
+.E-holder{
+    background-color: var(--bg);
 }
 :root{ 
 
@@ -21,6 +24,7 @@ body{
     --secondary: #004F99;  /* LINKED TEXT AND NAVBAR */
     --tertiary: #003566;
     --bg: white;
+    --bg-2: #E9F5F4;
     --p-text:  #003566;
     --s-text:  #5D7F9E;
     --b-p-text: black;
@@ -50,6 +54,7 @@ body{
         --b-p-text: white;
         --b-s-text: #4d4d4d;
         --p20:#E9F0F6;
+         --bg-s: #161616;
     
         /* font size */
         --font-header: 2.3rem;
@@ -60,3 +65,28 @@ body{
 }
 
 
+.bg-holder-1{
+    background-color: var(--bg-s);
+    z-index: 2;
+}
+.bg-holder-2{
+    background-color: var(--bg);
+}
+
+.text{
+    color: var(--b-p-text);
+}
+
+.t-header{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.btn.btn-outline-kodo{
+    color: var(--b-p-text);
+    border-color: var(--b-p-text) ;
+}
+.btn.btn-outline-kodo:hover{
+    background-color: black;
+    color: var(--primary);
+}

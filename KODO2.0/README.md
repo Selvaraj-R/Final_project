@@ -43,4 +43,38 @@
 
  It took me 3 hrs to finish a navbar i am doing my work slowly i need to fasten up otherwise i won't be able to finish my work within  6 more days 
 
+ I finished navbar and it took me one whole day to finsih it as i was distracted by friends and went to play with them and it costed me my whole day but i enjoyed my day 
+
+ attleast i am glad i finshed my navbar
+
+ ---
+
+ # day 3 
+
+ ***i started my home page by 11:00 pm and finsihed it by 1:12 am***
+
+I planned my work and did nothing just took a break and watched a movie and had a laught buster weekend home and 
+
+i finished 5% project by day 3  
+it is better to do something than doing nothing
+
+
+---
+
+# day 4
+
+ ***starting my work at 10:00 am***
+
+ * made changes to my home page 
+
+ >homepage with dark mode and light mode
+ >
+ >
+ >![homepage](/app/assets/images/hom.png)
+
+ things i plan to do today is finish coures,overview and content page by today.
+
+
+
+ **i can i  will**
 

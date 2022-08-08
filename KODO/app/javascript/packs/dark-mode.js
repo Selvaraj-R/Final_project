@@ -26,9 +26,9 @@ function lightmode() {
     dark.classList.remove("bxs-sun");
     saveInLs('dark-mode', "false")
 }
-function saveInLs(key, value) {
-    localStorage.setItem(key, value);
-}
+    function saveInLs(key, value) {
+        localStorage.setItem(key, value);
+    }
 
 
 

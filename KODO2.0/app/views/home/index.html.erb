@@ -1,41 +1,121 @@
-<nav class="nav-holder">
+<div class="E-holder">
+
+    <div class="holder-img">
+
+        <%= image_tag("hm.png" , class:"img") %>
+    </div>
+
+
     <div class="container">
-        <div class="navbar-custom">
-            <span class="logo">
-                <%= image_tag("logo.png" ,height: '60px' ) %>
-            </span>
-            <div class="menu-holder">
-                <ul class="nav-item">
-                    <li><a> Courses</a> </li>
-                    <li><a> blog</a> </li>
-                    <li><a> about</a> </li>
-                    <li><a> case study</a> </li>
-                    <li><a> Courses</a> </li>
-                </ul>
+        <section class="sec-one">
+<%# 
+        <div class="tri"></div>
+        <div class="cir"> </div> %>
+
+            <div class="one-text">
+                <h1>
+                    Find the best
+                    <br>
+                    online courses &
+                    <br>
+                    learn
+                </h1>
+
+                <p class="small-text"> “Study without desire spoils the memory, and it retains nothing that it takes
+                    in.” <br>
+
+                </p>
+                <button class="btn btn-outline-kodo"> Explore courses </button>
+
             </div>
 
-            <div class="darkmode-search">
-
-                <div class="darkmode">
-
-                    <i id="moon" class='bx bx-moon'></i>
-                </div>
-
-                <div class="search-box">
-                    <i id="search" class='bx bx-search'></i>
-
-                    <form action="">
-                    <div id ="search-field" class="search-field">
-                    <input type="text" placeholder="search">
-                    <button type="submit" class="btn btn-outline-primary">
-                     <i class='bx bx-search'></i>
-                    </button>
-                    </div>
-                    </form>
-                </div>
+            <div class="one-img">
             </div>
+
+        </section>
+
+
+
+
+    </div>
+
+    <div class="bg-holder-1">
+        <div class="container">
+
+
+            <h1 class="text">About.<span style="color: var(--primary) ;">KODO</span></h1>
+            <section class="sec-two">
+
+                <div class="sec-about">
+                    <h1>about us</h1>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nostrum a voluptates optio voluptas,
+                    eum deleniti at ducimus porro neque pariatur debitis temporibus dignissimos doloremque veniam quia
+                    deserunt, quos reprehenderit.
+                </div>
+                <div class="about-img">
+                    <%= image_tag("jh.jpg" ,width: "600px" ) %>
+                </div>
+            </section>
         </div>
     </div>
-</nav>
 
-    <%= javascript_pack_tag "Dark_Mode.js" %>
+    <div class="bg-holder-2">
+        <div class="container">
+            <section class="sec-three">
+
+                <div class="sec-three-text">
+                    <h1 class="text t-header"> Featured courses</h1>
+                    <p class="small-text"> Explore our structured learning paths to discover everything you need to know
+                        about building for the modern web.</p>
+                </div>
+
+                <div class="sec-courses">
+
+                    <div class="card-m">
+
+
+                        <div class="card-img">
+                           <%= image_tag("htmlf.png" ,class:"course-logo")%>
+                        </div>
+                        <div class="card-title">
+                            <h3 class="text"> HTML</h3>
+                        </div>
+                        <div class="card-body">
+                        <p class="text">The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. </p>
+
+                        </div>
+                    </div>
+                    <div class="card-m">
+
+
+                        <div class="card-img">
+                           <%= image_tag("csslogo.png" ,class:"course-logo")%>
+                        </div>
+                        <div class="card-title">
+                            <h3 class="text"> CSS</h3>
+                        </div>
+                        <div class="card-body">
+                        <p class="text">Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. </p>
+
+                        </div>
+                    </div>
+                    <div class="card-m">
+
+
+                        <div class="card-img">
+                           <%= image_tag("jslogo.png" ,class:"course-logo")%>
+                        </div>
+                        <div class="card-title">
+                            <h3 class="text"> JS</h3>
+                        </div>
+                        <div class="card-body">
+                        <p class="text">The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. </p>
+
+                        </div>
+                    </div>
+               
+            </section>
+        </div>
+    </div>
+
+</div>

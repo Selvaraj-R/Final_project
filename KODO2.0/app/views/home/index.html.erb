@@ -3,7 +3,7 @@
     <div class="holder-img">
 
         <%= image_tag("hm.png" , class:"img") %>
-    </div>
+    </div>  
 
 
     <div class="container">
@@ -29,8 +29,9 @@
             in.” <br>
 
         </p>
-        <button class="btn btn-outline-kodo"> Explore courses </button>
-
+        <%# <button class="btn btn-outline-kodo"> Explore courses </button> %>
+        
+<%= link_to "Explore Courses" ,"courses/index", class: "btn btn-outline-kodo"  %>
     </div>
 
     <div class="one-img">
@@ -120,7 +121,7 @@
 
 
 
-<div class="bg-holder-1">
+<div class="bg-holder-1" id="about">
     <div class="container">
 
 

@@ -10,7 +10,7 @@ a{
     text-decoration: none !important;
 }
 body{
-    background-color: var(--bg);
+    background-color: var(--bg) !important;
     /* transition: all ease-in-out 0.2s; */
 }
 .E-holder{

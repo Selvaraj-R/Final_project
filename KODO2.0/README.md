@@ -87,3 +87,7 @@ it is better to do something than doing nothing
 >![courses](app/assets/images/readme/lc.png)
 
 
+
+# day 5
+
+welcome

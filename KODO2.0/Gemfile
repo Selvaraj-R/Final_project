@@ -64,3 +64,7 @@ gem 'dotenv-rails', groups: %i[development test production]
 # rubo cop gem auto formatting code
 
 gem 'rubocop', require: false
+
+
+# gem devise
+gem 'devise'

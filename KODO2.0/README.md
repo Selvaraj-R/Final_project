@@ -87,8 +87,15 @@ it is better to do something than doing nothing
 >![courses](app/assets/images/readme/lc.png)
 
 
+ * **finished courses page fully and created overview page also**
+
+* As the time passes my brain is being active and i found it easier to work with codes and understanding the code betters 
+
 
 # day 5
 
-welcome 
-to ace 
+**Today I didn't do any work till 4:30 as i was helping my peer and showing of my things i did yesterday and planned to work by 2:00pm but unfortunetly there was class about git pull request and branches so i wasn't able to work but by today end  i am planning finishing login and add quiz** 
+
+*11 hours has passed did't do any work related to my project need to finish two feature by today* 
+
+don't take rest and or show off untill you are fully done

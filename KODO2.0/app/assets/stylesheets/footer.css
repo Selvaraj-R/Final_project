@@ -40,7 +40,6 @@
 }
 .icon-item li {
     padding: 5px 20px;
-    cursor: pointer;
     color: var(--b-s-text);
 }
 .icon-item li:hover,.footer-item li:hover{
@@ -70,6 +69,5 @@
 }
 .social-box li{
     padding: 0px 20px;
-    cursor: pointer;
     transform: rotate(180deg);
 }

@@ -24,11 +24,12 @@ div.text-holder-course{
     
 } */
 .cr-two{
-    height: 80vh;
+    height: inherit;
     /* width: 50%; */
     position: absolute;
     right: 0;
     overflow: hidden;
+    z-index: 1;
    
 }
 .cr-one{

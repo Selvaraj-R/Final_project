@@ -68,3 +68,5 @@ gem 'rubocop', require: false
 
 # gem devise
 gem 'devise'
+
+#jquey

@@ -98,4 +98,17 @@ it is better to do something than doing nothing
 
 *11 hours has passed did't do any work related to my project need to finish two feature by today* 
 
+
 don't take rest and or show off untill you are fully done
+
+I challenged myself that i will go to be only if i finish something today so i started **user authentication**  and finsihed it by 1:40am and went to bed but i was statisfied that i atleast finished somework
+# day 6 
+I after  staerted my work by 7pm as i was not feeling well ad headache i was sleeping the wholeday i wanted not to push myself and ruin my health so i took rest and till 7 pm and 
+
+after 7 1 started notification popup because it was distrubing other components of the page so i wanted it to show and fade after searching in google i found a solution to it and i finished it by 20min 
+
+*Not bad selva you are getting better in codging day by day  keep on man*
+
+60 hours left for me to finish my project
+
+i can do it and i will and i need to 

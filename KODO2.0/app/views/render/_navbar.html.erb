@@ -14,31 +14,37 @@
             <div class="menu-holder">
                 <ul class="nav-item">
                  <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a">Courses</span>   <% end %> </li>
-                   <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a">Blog</span>   <% end %> </li>  
+                   <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a">Mingle</span>   <% end %> </li>  
                     <li> <%= link_to 'http://localhost:3000/#about' ,class: "link-tag" do %>   <span class="a">About</span>   <% end %> </li> 
+                   
                  <!-- <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a"></span>   <% end  %> </li> -->
                 </ul>
             </div>
 
-            <div class="darkmode-search">
 
+            <div class="darkmode-search">
                 <div class="darkmode">
                     <input type="checkbox" id="dark-box" hidden>
-                    <i id="moon" class='bx bx-moon'></i>
+                    <i id="moon" class='bx bxs-moon'></i>
                 </div>
 
                 <div class="search-box">
                     <i id="search" class='bx bx-search'></i>
+                  
 
                     <form action="">
                     <div id ="search-field" class="search-field">
-                    <input type="text" placeholder="search">
+                    <input type="text" placeholder="search courses">
                     <button type="submit" class="btn btn-outline-primary">
                      <i class='bx bx-search'></i>
                     </button>
                     </div>
                     </form>
+
                 </div>
+    
+                   <li> <%= link_to new_user_session_path ,class: "link-tag" do %>   <span class="btn btn-outline-primary">login</span>   <% end %> </li>  
+                  
             </div>
         </div>
     </div>

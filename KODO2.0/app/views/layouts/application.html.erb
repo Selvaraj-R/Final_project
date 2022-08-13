@@ -32,20 +32,53 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet"> 
      <%# google fonts %>
+     <%# Jquery link %>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <%# Jquery link %>
+
+
+
 
   </head>
 
   <body>
-    <%# <%= render "render/navbar"  %> %>
-    <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
 
-       <%# <% if user_signed_in? %>
 
-       <%# <%= current_user.id %> 
-<%# <% end %> 
+
+  <% if notice %>
+  <div id="alert-id">
+
+    <p class="notice alert-success "><%= notice %></p>
+  </div>
+  <% elsif alert %>
+  <div id="alert-id">
+       <p class="alert alert-danger"><%= alert %></p>
+  </div>
+  <% end %>
+    
+    <%= render "render/navbar"  %>
     <%= yield %>
-       <%# <%= link_to 'log out' ,destroy_user_session_path,class:"btn btn-danger ",method: :delete%> 
+    <%= link_to 'log out' ,destroy_user_session_path,class:"btn btn-danger ",method: :delete   %>
     <%= render "render/footer" %>
   </body>
 </html>
+
+        
+
+       <!-- <% if user_signed_in? %>
+
+       <%= current_user.id %> 
+       <%= current_user.Username %> 
+ <% end  %> -->
+ <script>
+  $(document).ready(function(){
+    setTimeout(function(){
+      $('#alert-id').fadeOut("slow", function(){
+        $(this).remove();
+      })
+    },2500);
+  });
+ 
+ </script>
+
+ 

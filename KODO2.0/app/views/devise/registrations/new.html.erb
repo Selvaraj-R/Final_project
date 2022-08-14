@@ -1,35 +1,52 @@
+<%# <%=render "devise/shared/links" %> 
+
+  <%# <%=render "devise/sessions/new" %>
+
+    
+    <div class="container">
+      <div class="form-container">
+        <div class="form-holder sign">
+              <div class="title">
+              Sign Up
+              </div>
+             <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+                  <%= render "devise/shared/error_messages" , resource: resource %>
+              <div class="input-holder">
+              <i class='bx bxs-user'></i>
+                <%= f.text_field :Username, autofocus: true, autocomplete: "Username" ,class: "no-border" ,placeholder: "Name" %>
+              </div>
+
+              <div class="input-holder">
+               <i class='bx bxs-envelope' ></i>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "no-border" ,placeholder:"email" %>
+
+              </div>
+                  <% if @minimum_password_length %>
+                    <span>(<%= @minimum_password_length %>
+                        characters minimum password)</span>
+                    <% end %>
+              <div class="input-holder">
+              <i class='bx bxs-lock-alt' ></i>
+                      <%= f.password_field :password, autocomplete: "new-password" ,class: "no-border",placeholder:"password" %> <br>
 
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-    <div class="field">
-    <%= f.label :Username %><br/>
-    <!-- <input type="text" name="user[Username"> -->
-    <%= f.text_field :Username, autofocus: true, autocomplete: "Username" %>
-  </div>
+
+              </div>
+              <div class="input-holder">
+               <i class='bx bxs-lock-alt' ></i>
+                  <%= f.password_field :password_confirmation, autocomplete: "new-password"  ,class: "no-border",placeholder:"confirm password"%>
+              </div>
+
+              <div class="btn-holder">
+                <%= f.submit "Sign up" ,class:"btn btn-outline-primary " %>
+                            </div>
+                <% end %>
+          </div>
+
+          
+          <%= render 'devise/sessions/new' %></div>
+   
+</div>
   
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+          

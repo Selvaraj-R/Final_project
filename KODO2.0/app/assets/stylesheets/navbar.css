@@ -132,3 +132,16 @@
    }
    
 
+   /* #notice */
+   .notice{
+    position: absolute !important;
+    height: fit-content;
+    /* width: fit-content; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    /* right: 2%; */
+    top: 80px;
+}

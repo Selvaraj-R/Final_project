@@ -15,7 +15,6 @@
     width: 100%;
     height: fit-content;
     padding: 20px;
-    border: 2px solid red;
 }
 
 .blog-chat-holder {
@@ -60,3 +59,35 @@
     z-index: 20;
     transition: 0.5s all ease-in-out;
 }
+
+.title-bc {
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 300;
+    min-width: 15rem;
+    padding: 5px 10px;
+    text-align: center;
+    background: var(--bg);
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    /* border: 1px solid var(--p-text); */
+}
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

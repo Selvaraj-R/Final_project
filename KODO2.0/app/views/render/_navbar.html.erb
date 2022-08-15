@@ -44,10 +44,10 @@
                 </div>
                  <% if user_signed_in?  %>
                        
-    <i class='bx bxs-user-circle' data-bs-toggle="dropdown" aria-expanded="false" ></i>
+    <i class='bx bxs-user-circle mouse' data-bs-toggle="dropdown" aria-expanded="false" ></i>
                         
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#"> <%= current_user.Username %></a></li>
+    <li><a class="dropdown-item mouse-no" > <%= current_user.Username.capitalize %></a></li>
     <li> <%= link_to 'Edit profile' ,edit_user_registration_path ,class: "dropdown-item"%> </li>
     <li><hr class="dropdown-divider"></li>
     <li> 

@@ -256,3 +256,15 @@ padding: 20px;
     justify-content: space-around;
     align-items: center;
 }
+
+/* ##edit */
+.edit-holder{
+    display: grid;
+    place-content: center;
+    /* place-items: center; */
+    /* text-align: center; */
+    grid-template-columns: 1fr;
+    margin-bottom: 100px;
+    background-color: white;
+    padding: 20px 100px;
+}

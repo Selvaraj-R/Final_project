@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+ 
+
+  resources :categories
+resources :blogs
   get 'courses/addCourse'
   get 'courses/index'
   get 'homes/about'

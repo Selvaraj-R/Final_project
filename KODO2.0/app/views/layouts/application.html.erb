@@ -50,6 +50,7 @@
       rel="stylesheet"
     >
     <%# google fonts %>
+
     <%# Jquery link %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <%# Jquery link %>
@@ -57,8 +58,7 @@
   </head>
 
   <body>
-
-    <%# <%= render "render/navbar" %> 
+    <%= render "render/navbar" %>
     <% if notice %>
       <div id="alert-id">
 
@@ -70,10 +70,10 @@
       </div>
     <% end %>
     <%= yield %>
-    <%= link_to 'log out' ,destroy_user_session_path,class:"btn btn-danger ",method: :delete %> 
-    <%# <%= render "render/footer" %> 
+      <%# <%= render "render/footer" %>
   </body>
 </html>
+    <%# <%= link_to 'log out' ,destroy_user_session_path,class:"btn btn-danger ",method: :delete %>  
 <!--
 <% if user_signed_in? %>
 

@@ -1,0 +1,62 @@
+.items-holder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.switch-holder {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.blog-chat-holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-chat-holder .blog {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: 0.5s all ease-in-out;
+    opacity: 1;
+    min-height: 100vh;
+}
+
+.blog-chat-holder .blog-swap {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.5s all ease-in-out;
+    position: absolute;
+}
+
+.blog-chat-holder .chat {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+    position: absolute;
+    display: none;
+}
+
+.blog-chat-holder .chat-swap {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    opacity: 1;
+    z-index: 20;
+    transition: 0.5s all ease-in-out;
+}

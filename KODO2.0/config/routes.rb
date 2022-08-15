@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
  
+  get 'mingle/index'
   get 'courses/index'
   get 'home/index'
   get 'courses/content'

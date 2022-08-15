@@ -13,9 +13,9 @@
             <% end %>
             <div class="menu-holder">
                 <ul class="nav-item">
-                 <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a">Courses</span>   <% end %> </li>
-                   <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a">Mingle</span>   <% end %> </li>  
-                    <li> <%= link_to 'http://localhost:3000/#about' ,class: "link-tag" do %>   <span class="a">About</span>   <% end %> </li> 
+            <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class=" <%= is_active?(courses_index_path) %> ">Courses</span>   <% end %> </li>
+                   <li> <%= link_to '/mingle/index' ,class: "link-tag" do %>   <span class=" <%= is_active?(mingle_index_path) %> ">Mingle</span>   <% end %> </li>  
+                    <li> <%= link_to 'http://localhost:3000/#about' ,class: "link-tag" do %>   <span class=" a ">About</span>   <% end %> </li> 
                    
                  <!-- <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a"></span>   <% end  %> </li> -->
                 </ul>
@@ -42,9 +42,23 @@
                     </form>
 
                 </div>
+                 <% if user_signed_in?  %>
+                       
+    <i class='bx bxs-user-circle' data-bs-toggle="dropdown" aria-expanded="false" ></i>
+                        
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#"> <%= current_user.Username %></a></li>
+    <li> <%= link_to 'Edit profile' ,edit_user_registration_path ,class: "dropdown-item"%> </li>
+    <li><hr class="dropdown-divider"></li>
+    <li> 
     
-                   <li> <%= link_to new_user_session_path ,class: "link-tag" do %>   <span class="btn btn-outline-primary">login</span>   <% end %> </li>  
-                  
+       <%= link_to 'Log out' ,destroy_user_session_path,class:"dropdown-item",method: :delete %> 
+    </li>
+  </ul>
+              <% else %>
+                   <li> <%= link_to new_user_registration_path ,class: "btn btn-outline-log" do %>   <span class="">Sign up</span>   <% end %> </li>  
+
+                <% end %>                  
             </div>
         </div>
     </div>

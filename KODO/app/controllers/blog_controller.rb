@@ -3,6 +3,7 @@ class BlogController < ApplicationController
   end
 
   def show
+# @blog = Blog.find(params[:id])
   end
 
   def new
@@ -20,8 +21,8 @@ class BlogController < ApplicationController
   end
 
   private
-  def blog_params
-    params.require(:blog).permit(:title ,:content,:iframe)
+  def blog_params 
+    params.require(:blog).permit(:title ,:content,:iframe, :image)
   end
 
 end

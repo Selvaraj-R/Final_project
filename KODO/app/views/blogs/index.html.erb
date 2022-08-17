@@ -8,9 +8,9 @@
 
 
 <% @blogs.each do |blog| %>
-<h1> <%= blog.title %>  <%= blog.id %></h1>
 
 <%= link_to blog.title ,blog_path(blog.id) %>
+<%# <h1> <%= blog.title %> <%= blog.content %></h1> 
 
 
 <% end %>

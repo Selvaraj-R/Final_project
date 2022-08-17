@@ -2,12 +2,16 @@
 
 Rails.application.routes.draw do
  
+  resources :blogs
+  resources :aces
   get 'mingle/index'
   get 'courses/index'
   get 'home/index'
   get 'courses/content'
   root 'home#index'
   get 'home/signup'
+
+  get 'search' , to: 'home#search'
   devise_for :users, controllers: {
     registrations: 'registrations/registrations'
   }

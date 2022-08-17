@@ -2,9 +2,11 @@
 <p>Find me in app/views/blogs/show.html.erb</p>
 
 <h1>
-<%= @blog.Category.category.id %> 
+<%= @blog.category_id %> 
 </h1> 
 <h3><%= @blog.title %></h3>
+<p> <%= @blog.category.category %> </p>
+<p> </p>
 
 <div class="flex-cen"> 
 <%= @blog.content %>

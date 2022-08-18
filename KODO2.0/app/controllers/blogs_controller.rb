@@ -20,6 +20,24 @@ class BlogsController < ApplicationController
   # GET /blogs/1/edit
   def edit
   end
+  def save_blogs
+    # @saveblog = SavedBlog.find(params[:blog_id])
+ @check_current_user = SavedBlog.find_by(blog_id: params[:blog_id], user_id: current_user.id)
+
+ if @check_current_user 
+  redirect_to blogs_path, notice: "blog already saved"
+
+ else
+  blog_id = params[:blog_id]
+  user_id = current_user.id
+# if blog_id == @saveblog.id
+  SavedBlog.create user_id: user_id , blog_id: blog_id
+
+  redirect_to blogs_path, notice: "blog saved to your list"
+  # render plain: true
+ end
+
+  end
 
   # POST /blogs or /blogs.json
   def create
@@ -58,6 +76,10 @@ class BlogsController < ApplicationController
       format.html { redirect_to blogs_url, notice: "Blog was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def savedblogs
+    # @blogs = Blog.all
   end
 
   private

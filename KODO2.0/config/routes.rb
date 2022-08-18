@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   get 'courses/content'
   root 'home#index'
   get 'home/signup'
-
+  get 'savedblogs', to: 'blogs#savedblogs' 
+  get '/saveblog/:blog_id' , to: 'blogs#save_blogs'
   get 'search' , to: 'home#search'
   devise_for :users, controllers: {
     registrations: 'registrations/registrations'

@@ -28,7 +28,7 @@ body {
     /* LINKED TEXT AND NAVBAR */
     --tertiary: #003566;
     --bg: white;
-    --bg-2: #E9F5F4;
+    --bg-2: #f1f1f1;
     --p-text: #003566;
     --s-text: #5D7F9E;
     --b-p-text: black;
@@ -66,7 +66,7 @@ body {
     --p20: #E9F0F6;
     --bg-s: #161616;
     --b-primary: #0085ff;
-
+    --bg-2: #010101;
     /* font size */
     --font-header: 2.3rem;
     --font-text: 1rem;
@@ -178,3 +178,4 @@ body {
 .mouse-no{
     pointer-events: none;
 } 
+

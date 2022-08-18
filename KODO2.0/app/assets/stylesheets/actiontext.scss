@@ -14,9 +14,8 @@
   text-align: left;
   padding-left: 2rem;
   font-size: 1.5rem;
-  // border: 2px solid red;
   width: 80%;
-  background-color: var(--bg) !important;
+ border: none !important;
   color: var(--b-s-text) !important;
   .attachment-gallery {
     > action-text-attachment,
@@ -50,11 +49,14 @@
   color: var(--b-p-text) !important;
 }
 
-// .trix-button{
-//   background-color: var(--secondary) !important;
-// }
+.trix-button{
+  background-color: white !important;
+  border: none !important;
+}
 .trix-button:hover{
   background-color: var(--primary) !important;
 }
-
+.trix-button-row{
+  width: 80%;
+}
 

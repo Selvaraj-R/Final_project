@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
- 
   resources :blogs
   resources :aces
   get 'mingle/index'
@@ -10,9 +9,10 @@ Rails.application.routes.draw do
   get 'courses/content'
   root 'home#index'
   get 'home/signup'
-  get 'savedblogs', to: 'blogs#savedblogs' 
-  get '/saveblog/:blog_id' , to: 'blogs#save_blogs'
-  get 'search' , to: 'home#search'
+  get 'savedblogs', to: 'blogs#savedblogs'
+  get '/saveblog/:blog_id', to: 'blogs#save_blogs'
+  get 'search', to: 'home#search'
+  delete 'deleteSavedBlog/:id', to: 'blogs#removeSavedBlog'
   devise_for :users, controllers: {
     registrations: 'registrations/registrations'
   }

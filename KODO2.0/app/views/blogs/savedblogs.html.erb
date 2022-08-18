@@ -22,8 +22,11 @@
   <% get_blog =  Blog.where(id: @check_blog) %>
 
   <%  get_blog.each do |current_blog| %>
+  <%= get_user.id  %>
 
    <%= current_blog.title %>
+ <%= link_to "deleteSavedBlog/#{get_user.id}",  method: :delete, data: { confirm: 'Are you sure?' } do %>  deletee  <% end %>
+
 
   <% end %>
 

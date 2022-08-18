@@ -65,8 +65,7 @@ gem 'dotenv-rails', groups: %i[development test production]
 
 gem 'rubocop', require: false
 
-
 # gem devise
 gem 'devise'
 
-#jquey
+# jquey

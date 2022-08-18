@@ -17,7 +17,7 @@ if (tog_mode == "true") {
 
 function darkmode() {
     var moon = document.getElementById("moon");
-    moon.classList.add("bx-sun");
+    moon.classList.add("bxs-sun");
     document.body.classList.add("darkmode");
     saveInLs("dark_mode", "true");
     // let course = document.getElementById("course-img");
@@ -29,7 +29,7 @@ function darkmode() {
 
 function lightMode() {
     var moon = document.getElementById("moon");
-    moon.classList.remove("bx-sun");
+    moon.classList.remove("bxs-sun");
     document.body.classList.remove("darkmode");
     saveInLs("dark_mode", "false");
 }

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'mingle/index'
   get 'courses/index'
   get 'home/index'
-  get 'courses/content', to: 'courses#content'
+  get 'courses/content'
   root 'home#index'
   get 'home/signup'
   get 'savedblogs', to: 'blogs#savedblogs'

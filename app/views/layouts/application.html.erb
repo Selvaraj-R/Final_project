@@ -51,14 +51,17 @@
     >
     <%# google fonts %>
 
-    <%# Jquery link %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <%# Jquery link %>
-
   </head>
 
   <body>
-    <%= render "render/navbar" %>
+     <%= render "render/navbar" %> 
+
+
+
+
+  
+
+
     <% if notice %>
       <div id="alert-id">
 
@@ -81,12 +84,4 @@
   <%= current_user.Username %>
 <% end %>
 -->
-<script>
-  $(document).ready(function(){
-    setTimeout(function(){
-      $('#alert-id').fadeOut("slow", function(){
-        $(this).remove();
-      })
-    },2500);
-  });
-</script>
+

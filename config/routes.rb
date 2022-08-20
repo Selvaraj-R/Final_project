@@ -2,17 +2,16 @@
 
 Rails.application.routes.draw do
   resources :blogs
-  resources :aces
   get 'mingle/index'
   get 'courses/index'
   get 'home/index'
-  get 'courses/content'
+  get 'courses/content', to: 'courses#content'
   root 'home#index'
   get 'home/signup'
   get 'savedblogs', to: 'blogs#savedblogs'
   get '/saveblog/:blog_id', to: 'blogs#save_blogs'
   get 'search', to: 'home#search'
-  delete 'deleteSavedBlog/:id', to: 'blogs#removeSavedBlog'
+  delete 'deleteSavedBlog/:id', to: 'blogs#removesavedBlog'
   devise_for :users, controllers: {
     registrations: 'registrations/registrations'
   }

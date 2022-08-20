@@ -8,8 +8,11 @@
 <div>
 <% @filtered_items.each do |f| %>
 
-<p> <%= f['Username'] %></p>
- <p> <%= f.Username %></p> 
+ <p> <%= f.title %></p> 
+ <%# <%=  link_to f.title , %> 
+ <a href="/blogs/<%= f['id'] %>"> <%= f.title %> </a>
+
+      
 <% end %>
 </div>
 

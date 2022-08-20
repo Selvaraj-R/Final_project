@@ -2,7 +2,6 @@
   <div class="menu-blog"> 
   <%= link_to 'New Blog' , new_blog_path,class:"btn btn-primary" %> <br>
   <%= link_to 'blogs' , blogs_path,class:"btn btn-primary" %> <br>
-
   <%= link_to 'saved blogs' , savedblogs_path,class:"btn btn-primary" %> <br>
 
   </div>
@@ -19,6 +18,7 @@
       </button>
 <a href="/saveblog/<%= blog['id'] %>">
      <div class="btn btn-outline-primary" > <i class='bx bx-bookmark-heart'></i></div>
+     
 </a>
       <!-- Modal -->
       <div class="modal fade" id= "<%= blog.title.gsub(/\s+/, '') %><%= blog.id %>" tabindex="-1" aria-labelledby="exampleModalLabel"

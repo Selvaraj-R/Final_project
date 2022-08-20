@@ -25,7 +25,7 @@ class BlogsController < ApplicationController
     @check_current_user = SavedBlog.find_by(blog_id: params[:blog_id], user_id: current_user.id)
 
     if @check_current_user
-      redirect_to blogs_path, notice: 'blog already saved'
+      redirect_to blogs_path, alert: 'blog already saved'
 
     else
       blog_id = params[:blog_id]
@@ -81,10 +81,10 @@ class BlogsController < ApplicationController
     # @blogs = Blog.all
   end
 
-  def removeSavedBlog
+  def removesavedBlog
     @savedBlog = SavedBlog.where(id: params[:id])
     @savedBlog.destroy_all
-    redirect_to savedblogs_path, notice: 'blog removed from wishlist'
+    redirect_to savedblogs_path, alert: 'blog removed from wishlist'
   end
 
   private

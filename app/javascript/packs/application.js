@@ -16,3 +16,11 @@ ActiveStorage.start()
 
 require("trix")
 require("@rails/actiontext")
+
+$(document).on('ready turbolinks:load', function(){
+    setTimeout(function(){
+      $('#alert-id').fadeOut("slow", function(){
+        $(this).remove();
+      })
+    },3500);
+  });

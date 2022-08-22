@@ -91,7 +91,7 @@ def myblog
   
 end
 
-  def remove_savedBlog
+  def destroy_saved
     @savedBlog = SavedBlog.where(id: params[:id])
     @savedBlog.destroy_all
     redirect_to savedblogs_path, alert: 'blog removed from wishlist'

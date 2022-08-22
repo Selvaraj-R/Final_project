@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'myblog', to: 'blogs#myblog'
   get '/saveblog/:blog_id', to: 'blogs#save_blogs'
   get 'search', to: 'home#search'
-  delete 'deleteSavedBlog/:id', to: 'blogs#remove_savedBlog'
+  delete 'deleteSavedBlog/:id', to: 'blogs#destroy_saved'
   devise_for :users, controllers: {
     registrations: 'registrations/registrations'
   }

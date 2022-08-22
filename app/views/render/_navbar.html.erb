@@ -17,7 +17,7 @@
                    <li> <%= link_to blogs_path ,class: "link-tag" do %>   <span class=" <%= is_active?(blogs_path) %> ">blog</span>   <% end %> </li>  
                     <li> <%= link_to 'http://localhost:3000/#about' ,class: "link-tag" do %>   <span class=" a ">About</span>   <% end %> </li> 
                    
-                 <!-- <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a"></span>   <% end  %> </li> -->
+                
                 </ul>
             </div>
 
@@ -25,18 +25,18 @@
             <div class="darkmode-search">
                 <div class="darkmode">
                     <input type="checkbox" id="dark-box" hidden>
-                    <i id="moon" class='bx bxs-moon'></i>
+                    <em id="moon" class='bx bxs-moon'></em>
                 </div>
 
                 <div class="search-box">
-                    <i id="search" class='bx bx-search'></i>
+                    <em id="search" class='bx bx-search'></em>
                   
 
                     <form action="/search">
                     <div id ="search-field" class="search-field">
                     <input type="text"  name='q' placeholder="search courses">
                     <button type="submit" class="btn btn-outline-primary">
-                     <i class='bx bx-search'></i>
+                     <em class='bx bx-search'></em>
                     </button>
                     </div>
                     </form>
@@ -44,7 +44,7 @@
                 </div>
                  <% if user_signed_in?  %>
                        
-    <i class='bx bxs-user-circle mouse' data-bs-toggle="dropdown" aria-expanded="false" ></i>
+    <em class='bx bxs-user-circle mouse' data-bs-toggle="dropdown" aria-expanded="false" ></em>
                         
   <ul class="dropdown-menu">
     <li><a class="dropdown-item mouse-no" > <%= current_user.Username.capitalize %></a></li>
@@ -56,7 +56,9 @@
     </li>
   </ul>
               <% else %>
+              <ul>
                    <li> <%= link_to new_user_registration_path ,class: "btn btn-outline-log" do %>   <span class="">Sign up</span>   <% end %> </li>  
+              </ul>
 
                 <% end %>                  
             </div>

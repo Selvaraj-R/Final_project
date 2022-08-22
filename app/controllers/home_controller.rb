@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 class HomeController < ApplicationController
-  def index; end
+  def index
+    #this a page in blog so it is empty
+
+   end
 
   def search
     # @filtered_items = User.where('Username LIKE ? OR email LIKE ?', "%#{params[:q]}%", "%#{params[:q]}%")

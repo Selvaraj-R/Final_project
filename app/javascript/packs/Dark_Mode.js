@@ -4,7 +4,7 @@ function toggle_check() {
     document.getElementById('dark-box').click();
 }
 
-var tog_mode = localStorage.getItem("dark_mode");
+let tog_mode = localStorage.getItem("dark_mode");
 
 if (tog_mode == "true") {
     darkmode();

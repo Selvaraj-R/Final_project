@@ -10,7 +10,9 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/1 or /blogs/1.json
-  def show; end
+  def show
+    #this a page in blog so it is empty
+   end
 
   # GET /blogs/new
   def new
@@ -18,7 +20,10 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/1/edit
-  def edit; end
+  def edit
+    #this a page in blog so it is empty
+
+  end
 
   def save_blogs
     # @saveblog = SavedBlog.find(params[:blog_id])
@@ -86,7 +91,7 @@ def myblog
   
 end
 
-  def removesavedBlog
+  def remove_savedBlog
     @savedBlog = SavedBlog.where(id: params[:id])
     @savedBlog.destroy_all
     redirect_to savedblogs_path, alert: 'blog removed from wishlist'

@@ -72,7 +72,7 @@ class BlogsController < ApplicationController
     @blog.destroy
 
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
+      format.html { redirect_to blogs_url, alert: 'Blog was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -80,6 +80,11 @@ class BlogsController < ApplicationController
   def savedblogs
     # @blogs = Blog.all
   end
+def myblog
+     @blogs = Blog.all
+
+  
+end
 
   def removesavedBlog
     @savedBlog = SavedBlog.where(id: params[:id])

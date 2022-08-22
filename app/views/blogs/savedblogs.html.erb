@@ -7,6 +7,7 @@
   <%= link_to 'blogs' , blogs_path,class:"btn btn-primary" %> <br>
 
   <%= link_to 'saved blogs' , savedblogs_path,class:"btn btn-primary" %> <br>
+  <%= link_to 'my blogs' , myblog_path,class:"btn btn-primary" %> <br>
 
   </div>
   <div class="show-blog">
@@ -24,7 +25,9 @@
   <%  get_blog.each do |current_blog| %>
   <%= get_user.id  %>
 
+ <a href="/blogs/<%= current_blog['id'] %>"> 
    <%= current_blog.title %>
+  </a>
  <%= link_to "deleteSavedBlog/#{get_user.id}",  method: :delete, data: { confirm: 'Are you sure?' } do %>  deletee  <% end %>
 
 

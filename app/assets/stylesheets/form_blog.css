@@ -45,7 +45,7 @@ width: 100%;
     border-bottom: 1px solid grey;
 }
 
-input[type="image" i]{
+input[type="image" ]{
     font-size: 1rem;
     color: var(--primary);
     width: fit-content;

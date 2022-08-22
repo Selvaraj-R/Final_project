@@ -14,12 +14,12 @@
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           
           <div class="input-holder">
-            <i class='bx bxs-user'></i>
+            <em class='bx bxs-user'></em>
             <%= f.text_field :Username, autofocus: true, autocomplete: "Username" ,class: "no-border" ,placeholder: "Name" ,:required => true %>
           </div>
           
           <div class="input-holder">
-            <i class='bx bxs-envelope' ></i>
+            <em class='bx bxs-envelope' ></em>
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "no-border" ,placeholder:"email" %>
             
           </div>
@@ -28,14 +28,14 @@
             characters minimum password)</span>
             <% end %>
             <div class="input-holder">
-              <i class='bx bxs-lock-alt' ></i>
+              <em class='bx bxs-lock-alt' ></em>
               <%= f.password_field :password, autocomplete: "new-password" ,class: "no-border",placeholder:"password" %> <br>
               
               
               
             </div>
             <div class="input-holder">
-              <i class='bx bxs-lock-alt' ></i>
+              <em class='bx bxs-lock-alt' ></em>
               <%= f.password_field :password_confirmation, autocomplete: "new-password"  ,class: "no-border",placeholder:"confirm password"%>
             </div>
             

@@ -1,8 +1,16 @@
 # KODO
- 
-## why am i starting the project again from scratch?
-   I am challenging  myself to recreate my whole project ideas in 7 days without any distraction.
 
+heroku link: https://kodoselva.herokuapp.com/
+
+sonarcloud link: https://sonarcloud.io/summary/overall?id=Selvaraj-R_Final_project
+
+github link: https://github.com/Selvaraj-R/Final_project
+
+
+# welcome to **KODO** 
+ 
+## what is **KODO**
+  KODO is e-learning website where people can learn and share thier thoughts and stories about their leaning path 
 ### DAY 1
  * **Created logo and choosed color theme and   design for my project**
 

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/signup'
   get 'savedblogs', to: 'blogs#savedblogs'
+  get 'myblog', to: 'blogs#myblog'
   get '/saveblog/:blog_id', to: 'blogs#save_blogs'
   get 'search', to: 'home#search'
   delete 'deleteSavedBlog/:id', to: 'blogs#removesavedBlog'

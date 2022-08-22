@@ -5,9 +5,11 @@
   <%= link_to 'saved blogs' , savedblogs_path,class:"btn btn-primary" %> <br>
   <%= link_to 'my blogs' , myblog_path,class:"btn btn-primary" %> <br>
 
+
   </div>
   <div class="show-blog">
-    <% @blogs.each do |blog| %>
+  <% check_user =  Blog.where(user_id: current_user.id) %>
+    <% check_user.each do |blog| %>
     <div class="item">
 
 
@@ -16,7 +18,6 @@
 
       <button type="button" class="btn btn-primary bga" data-bs-toggle="modal" data-bs-target="#<%= blog.title.gsub(/\s+/, '') %><%= blog.id %>">
         <%= blog.title %>
-
       </button>
 <a href="/saveblog/<%= blog['id'] %>">
      <div class="btn btn-outline-primary" > <i class='bx bx-bookmark-heart'></i></div>
@@ -39,13 +40,14 @@
 
             </div>
             <div class="modal-footer">
-            
-
+             
+               <% if current_user.id=blog.user_id %>
                 <%= link_to 'Show' , blog %>
-                 
-          
+                  <%= link_to 'Edit' , edit_blog_path(blog) %>
+                    <%= link_to 'Destroy' , blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      <% else %>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                       
+                        <% end %>
             </div>
 
           </div>
@@ -56,4 +58,3 @@
     <div class="item"></div> 
   </div>
 </div>
-

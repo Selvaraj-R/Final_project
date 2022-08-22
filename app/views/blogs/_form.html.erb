@@ -5,30 +5,43 @@
         prohibited this blog from being saved:</h2>
 
       <ul>
+   
         <% blog.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
+ 
 
-  <div class="actions">
-    <%= link_to 'Back', blogs_path ,class: "btn btn-outline-danger" %>
-    <%= form.submit class:"btn btn-success" %>
 
+ <div class="blog-form-holder">
+  <div class="btn-form-holder">
+   <div class="btn-conteiner-one">
+     <%= form.submit class:"btn btn-success" %>
+    <div class="blob-image">
+      <%= form.label :blogImage, "Upload a cover image" %> 
+      <%= form.file_field :blogImage ,:required => true,class: "blog-img"  %>
+    </div>
+     <%= link_to 'Back', blogs_path ,class: "btn btn-outline-log" %>
+    </div>
+  
+  
+    <div class="field">
+      <%= form.text_field :title ,placeholder: "Title" ,:required => true,class: "blog-title",accept: "image/png, image/gif, image/jpeg" %>
+    </div>
+  </div>
+  <div class="content-holder">
+    <div class="field">
+      <%= form.rich_text_area :content,placeholder: "Tell your story..." ,:required => true%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.text_field :title ,placeholder: "TITLE" ,:required => true %>
-  </div>
-  <div class="field">
-    <%= form.label :blogImage %>
-    <%= form.file_field :blogImage ,:required => true  %>
-  </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.rich_text_area :content,placeholder: "start writing here" ,:required => true%>
-  </div>
+
+ </div>
+ 
+
+ 
 
 <% end %>

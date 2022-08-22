@@ -8,8 +8,9 @@
     </span>
     <div class="h6">
       <% resource.errors.full_messages.each do |message| %>
-      
+      <ul>
         <li class="alert alert-danger not"><%= message %></li>
+      </ul>
      
       <% end %>
     </ul>

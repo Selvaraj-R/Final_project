@@ -4,11 +4,11 @@
 <div class="title">LOGIN</div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="input-holder">
- <i class='bx bx-user'></i>
+ <em class='bx bx-user'></em>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: "email", class: "no-border"%>
 </div>
 <div class="input-holder">
-  <i class='bx bx-lock-alt'></i>
+  <em class='bx bx-lock-alt'></em>
     <%= f.password_field :password, autocomplete: "current-password",placeholder: "password" ,class: "no-border" %>
   </div>
 <div class="btn">

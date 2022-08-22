@@ -14,9 +14,7 @@
     justify-content: center;
     display: flex;
     left: 0;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 5rem;
     background-color: var(--bg-2);
     border-right: 2px solid var(--primary) ;

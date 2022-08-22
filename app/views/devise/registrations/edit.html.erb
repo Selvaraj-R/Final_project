@@ -24,7 +24,7 @@
   <div class="field">
     <em class="small">(password: leave blank if you don't want to change it)</em><br />
    <div class="input-holder">
-   <i class='bx bxs-lock-alt' ></i>
+   <em class='bx bxs-lock-alt' ></em>
     <%= f.password_field :password, autocomplete: "new-password",class:"no-border" %>
    </div>
     <% if @minimum_password_length %>
@@ -40,14 +40,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "no-border" %>
   </div>
 
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password %> <em>(we need your current password to confirm your changes)</em><br />
   <div class="input-holder">
    <em class='bx bxs-lock-alt' ></em>
 
     <%= f.password_field :current_password, autocomplete: "current-password",class: "no-border" %>
   </div>
-
-  <div class="actions">
     <%= f.submit "Update",class:"btn btn-primary" %>
   </div>
 <% end %>

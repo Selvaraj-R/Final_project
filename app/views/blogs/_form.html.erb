@@ -12,18 +12,15 @@
       </ul>
     </div>
   <% end %>
- 
-
-
  <div class="blog-form-holder">
   <div class="btn-form-holder">
    <div class="btn-conteiner-one">
-     <%= form.submit class:"btn btn-success" %>
+     <%= form.submit class:"btn btn-outline-log" %>
     <div class="blob-image">
       <%= form.label :blogImage, "Upload a cover image" %> 
       <%= form.file_field :blogImage ,:required => true,class: "blog-img"  %>
     </div>
-     <%= link_to 'Back', blogs_path ,class: "btn btn-outline-log" %>
+     <%= link_to 'Back', blogs_path ,class: "btn btn-outline-kodo" %>
     </div>
   
   

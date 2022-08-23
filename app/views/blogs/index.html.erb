@@ -1,35 +1,52 @@
-<div class="blog-holder">
-  <div class="menu-blog"> 
-  <%= link_to 'New Blog' , new_blog_path,class:"btn btn-primary" %> <br>
-  <%= link_to 'blogs' , blogs_path,class:"btn btn-primary" %> <br>
-  <%= link_to 'saved blogs' , savedblogs_path,class:"btn btn-primary" %> <br>
-  <%= link_to 'my blogs' , myblog_path,class:"btn btn-primary" %> <br>
+<div class="container">
 
+
+  <div class="blog-holder">
+    <div class="menu-blog">
+      <%= link_to new_blog_path,class:"blog title-bc hover-underline-animation" do %>
+        <em class='bx bxs-plus-square'></em>
+        New Blog
+
+        <% end %>
+          <%= link_to blogs_path,class:"blog title-bc hover-underline-animation" do %>
+
+            <em class='bx bxs-notepad'></em>
+            blogs
+            <% end %>
+
+              <%= link_to savedblogs_path,class:"blog title-bc hover-underline-animation" do %>
+                <em class='bx bx-list-check'></em>
+                saved Blogs
+                <% end %>
+                  <%= link_to myblog_path,class:"blog title-bc hover-underline-animation" do %>
+                    <em class='bx bxs-user-circle'></em>
+                    my blogs
+                    <% end %>
+    </div>
   </div>
-  <div class="show-blog">
-    <% @blogs.each do |blog| %>
-    <div class="item">
+</div>
 
 
-  
-
-
-      <button type="button" class="btn btn-primary bga" data-bs-toggle="modal" data-bs-target="#<%= blog.title.gsub(/\s+/, '') %><%= blog.id %>">
-        <%= blog.title %>
-
-      </button>
-<a href="/saveblog/<%= blog['id'] %>">
-     <div class="btn btn-outline-primary" > <em class='bx bx-bookmark-heart'></em></div>
-     
-</a>
+</div>
+<div class="show-blog">
+  <% @blogs.each do |blog| %>
+    
       <!-- Modal -->
-      <div class="modal fade" id= "<%= blog.title.gsub(/\s+/, '') %><%= blog.id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+      <div class="modal fade" id="<%= blog.title.gsub(/\s+/, '') %><%= blog.id %>" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
                 <%= blog.title %>
+                  <% @name=User.find_by(id: blog.user_id)%>
+                    <h1 class="blog-a-name">
+                      <%= @name.Username%>
+                    </h1>
+                    <div class="blog-date">
+                      <%= blog.created_at.to_date %>
+                    </div>
+
               </h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -39,13 +56,14 @@
 
             </div>
             <div class="modal-footer">
-            
 
-                <%= link_to 'Show' , blog %>
-                 
-          
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                       
+
+              <%= link_to 'Show' , blog %>
+
+                <%= link_to 'Destroy' , blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
             </div>
 
           </div>
@@ -53,7 +71,48 @@
       </div>
     </div>
     <% end %>
-    <div class="item"></div> 
-  </div>
 </div>
 
+
+
+<div class="container">
+
+  <div class="card-container">
+  <% @blogs.each do |blog| %>
+    <div href="#" class="card">
+   <%= image_tag blog.blogImage ,class:"card_image" if blog.blogImage.attached?%>
+     <label type="button" class="eye" data-bs-toggle="modal"
+        data-bs-target="#<%= blog.title.gsub(/\s+/, '') %><%= blog.id %>">
+    <div class="card__overlay">
+      <div class="card__header">
+        <div class="card__header-text">
+          <h3 class="card__title">
+             <%= blog.title %>
+          </h3>
+          <span class="card__lesson">
+          <% @name=User.find_by(id: blog.user_id)%>
+                    
+                     <p>  by <%= @name.Username%> </p>
+                      <p> posted on  <%= blog.created_at.to_date %></p>
+                   
+            </span>
+          </div>
+        </div>
+        <p class="card__description black">
+        <%= blog.content %>
+        </p>
+      </div>
+         </label>
+            <span class="nav-arrow">
+           
+              
+         <a href="/saveblog/<%= blog['id'] %>" class="save_blog">
+         <em class='bx bxs-bookmark'></em>
+      </a>
+     
+            </span>
+    </div>
+   
+    <% end %>
+  </div>
+</div>

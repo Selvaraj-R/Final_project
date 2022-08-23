@@ -61,18 +61,16 @@
 }
 
 .title-bc {
-    color: var(--primary);
+    color: var(--b-p-text);
     cursor: pointer;
-    font-size: 2rem;
-    font-weight: 300;
-    min-width: 15rem;
-    padding: 5px 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    min-width: fit-content;
     text-align: center;
     background: var(--bg);
-    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+    text-transform: capitalize;
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
-    /* border: 1px solid var(--p-text); */
 }
 .hover-underline-animation:after {
     content: '';
@@ -90,4 +88,9 @@
   .hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+  .blog-active{
+    border-bottom: 2px solid var(--b-p-text);
+    padding-bottom: 1px;
+    color: var(--primary);
   }

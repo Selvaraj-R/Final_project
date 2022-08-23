@@ -8,4 +8,11 @@ module ApplicationHelper
       'a'
     end
   end
+  def blog_active?(link_path)
+    if current_page?(link_path)
+      'blog-active'
+    else
+      'blog title-bc hover-underline-animation '
+    end
+  end
 end

@@ -7,7 +7,7 @@ class HomeController < ApplicationController
    end
 
   def search
-    # @filtered_items = User.where('Username LIKE ? OR email LIKE ?', "%#{params[:q]}%", "%#{params[:q]}%")
-    @filtered_items = Blog.where('title LIKE ? ', "%#{params[:q]}%")
+    @filtered_user = User.where('Username LIKE ? OR email LIKE ?', "%#{params[:q]}%", "%#{params[:q]}%")
+    @filtered_blog = Blog.where('title LIKE ? ', "%#{params[:q]}%")
   end
 end

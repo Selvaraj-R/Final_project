@@ -1,12 +1,12 @@
 
 
- <% if @filtered_items.length == 0  %>
+ <% if @filtered_blog.length == 0  %>
 
  <h1>no result found</h1>
  <% else %>
     
 <div>
-<% @filtered_items.each do |f| %>
+<% @filtered_blog.each do |f| %>
 
  <p> <%= f.title %></p> 
  <%# <%=  link_to f.title , %> 
@@ -17,4 +17,13 @@
 </div>
 
 
+<% end %>
+
+<h1>username</h1>
+<% @filtered_user.each do |f| %>
+
+ <p> <%= f.Username %></p> 
+ <%# <%=  link_to f.title , %> 
+
+      
 <% end %>

@@ -1,0 +1,67 @@
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+
+}
+.card-container .card{
+    height: 15rem !important;
+    background-color: white !important;
+    margin: 5px 10px;
+  
+}
+.card-container .card .card__overlay{
+    background-color: transparent !important;
+
+}
+.card-container .card .card__header{
+    background-color: transparent !important;
+    background: rgba( 255, 255, 255, 0.35 );
+/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+backdrop-filter: blur( 6.5px );
+-webkit-backdrop-filter: blur( 6.5px );
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+padding-bottom: 0;
+    
+}
+.card-container .card__lesson{
+    color: black !important;
+}
+.save_blog{
+    position: relative;
+    font-size: 2rem;
+z-index: 20;
+color: black;
+width: fit-content;
+height: fit-content;
+
+}
+.card-container .nav-arrow{
+    animation: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+}
+
+.card-container .card__title{
+    font-size: 1.5rem !important;
+text-transform: capitalize !important;
+color: black;
+font-weight: 500;
+}
+.nav-arrow .eye{
+    background-color: none;
+}
+
+.black{
+    color:  black !important;  
+}
+
+.card-container .card:hover .card__overlay {
+    transform: translateY(0);
+    background-color: white !important;
+    height: 16rem;
+  }

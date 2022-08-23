@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_22_042941) do
+ActiveRecord::Schema.define(version: 2022_08_22_094800) do
 
   create_table "aces", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -76,6 +76,12 @@ ActiveRecord::Schema.define(version: 2022_08_22_042941) do
     t.index ["reset_password_token"], name: "index_controllers_on_reset_password_token", unique: true
   end
 
+  create_table "roles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "role"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "saved_blogs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -94,12 +100,15 @@ ActiveRecord::Schema.define(version: 2022_08_22_042941) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "Username"
+    t.bigint "role_id", default: 2, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "saved_blogs", "blogs", on_update: :cascade, on_delete: :cascade
   add_foreign_key "saved_blogs", "users", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "users", "roles", on_update: :cascade, on_delete: :cascade
 end

@@ -3,15 +3,30 @@
 
 <div class="blog-holder">
   <div class="menu-blog"> 
-  <%= link_to 'New Blog' , new_blog_path,class:"btn btn-primary" %> <br>
-  <%= link_to 'blogs' , blogs_path,class:"btn btn-primary" %> <br>
-
-  <%= link_to 'saved blogs' , savedblogs_path,class:"btn btn-primary" %> <br>
-  <%= link_to 'my blogs' , myblog_path,class:"btn btn-primary" %> <br>
-
+ <%= link_to new_blog_path,class:"blog title-bc hover-underline-animation" do %>
+ <span class="material-symbols-outlined">
+</span>
+<em class='bx bxs-plus-square'></em>
+  New Blog 
+  <% end %>
+  <%= link_to  blogs_path,class:"blog title-bc hover-underline-animation" do %> 
+ <em class='bx bxs-notepad'></em>
+blogs
+<% end %>
+  <%= link_to savedblogs_path,class:"blog title-bc hover-underline-animation" do  %> 
+  <em class='bx bx-list-check'></em>
+  saved Blogs
+   <% end %>
+  <%= link_to  myblog_path,class:"blog title-bc hover-underline-animation" do %>
+   <em class='bx bxs-user-circle' ></em>
+   my blogs
+   <% end %> 
   </div>
+  </div>
+  </div>
+  <hr>
   <div class="show-blog">
-  
+     
 
     <div class="item">
 
@@ -40,7 +55,4 @@
     <div class="item"></div> 
   </div>
 </div>
-      <%# <!-- <%= image_tag blog.blogImage ,width:"300px" if blog.blogImage.attached?%> --> %>
-                    <%# <%= link_to 'Destroy' , blog, method: :delete, data: { confirm: 'Are you sure?' } %> %>
-                <%# <%= image_tag blog_item.blogImage ,width:"300px" if blog.blogImage.attached? %> %>
-      <!-- Modal -->
+    

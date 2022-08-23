@@ -15,7 +15,7 @@
                 <ul class="nav-item">
             <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class=" <%= is_active?(courses_index_path) %> ">Courses</span>   <% end %> </li>
                    <li> <%= link_to blogs_path ,class: "link-tag" do %>   <span class=" <%= is_active?(blogs_path) %> ">blog</span>   <% end %> </li>  
-                    <li> <%= link_to 'http://localhost:3000/#about' ,class: "link-tag" do %>   <span class=" a ">About</span>   <% end %> </li> 
+                    <li> <%= link_to '/#about' ,class: "link-tag" do %>   <span class=" a ">About</span>   <% end %> </li> 
                    
                 
                 </ul>
@@ -49,6 +49,10 @@
   <ul class="dropdown-menu">
     <li><a class="dropdown-item mouse-no" > <%= current_user.Username.capitalize %></a></li>
     <li> <%= link_to 'Edit profile' ,edit_user_registration_path ,class: "dropdown-item"%> </li>
+    <% if current_user.role_id == 1 %>
+    <li> <%= link_to 'dashboard' ,edit_user_registration_path ,class: "dropdown-item"%> </li>
+      
+    <% end %>
     <li><hr class="dropdown-divider"></li>
     <li> 
     

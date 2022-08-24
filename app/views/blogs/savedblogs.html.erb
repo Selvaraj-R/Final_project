@@ -1,58 +1,72 @@
-
-
-
 <div class="blog-holder">
-  <div class="menu-blog"> 
- <%= link_to new_blog_path,class:"blog title-bc hover-underline-animation" do %>
- <span class="material-symbols-outlined">
-</span>
-<em class='bx bxs-plus-square'></em>
-  New Blog 
-  <% end %>
-  <%= link_to  blogs_path,class:"blog title-bc hover-underline-animation" do %> 
- <em class='bx bxs-notepad'></em>
-blogs
-<% end %>
-  <%= link_to savedblogs_path,class:"blog title-bc hover-underline-animation" do  %> 
-  <em class='bx bx-list-check'></em>
-  saved Blogs
-   <% end %>
-  <%= link_to  myblog_path,class:"blog title-bc hover-underline-animation" do %>
-   <em class='bx bxs-user-circle' ></em>
-   my blogs
-   <% end %> 
-  </div>
-  </div>
-  </div>
-  <hr>
-  <div class="show-blog">
-     
-   
-    <div class="item">
-
-<% check_user =  SavedBlog.where(user_id: current_user.id) %>
-
-<% check_user.each do |get_user| %>
-   
-  <% @check_blog = get_user.blog_id %>
-  <% get_blog =  Blog.where(id: @check_blog) %>
-
-  <%  get_blog.each do |current_blog| %>
-  <%= get_user.id  %>
-
- <a href="/blogs/<%= current_blog['id'] %>"> 
-   <%= current_blog.title %>
-  </a>
- <%= link_to "deleteSavedBlog/#{get_user.id}",  method: :delete, data: { confirm: 'Are you sure?' } do %>  deletee  <% end %>
-
-
-  <% end %>
-
-
-<% end %>
-
-      
-    <div class="item"></div> 
+  <div class="menu-blog">
+    <%= link_to new_blog_path,class:"blog title-bc hover-underline-animation" do %>
+      <span class="material-symbols-outlined">
+      </span>
+      <em class='bx bxs-plus-square'></em>
+      New Blog
+      <% end %>
+        <%= link_to blogs_path,class:"blog title-bc hover-underline-animation" do %>
+          <em class='bx bxs-notepad'></em>
+          blogs
+          <% end %>
+            <%= link_to savedblogs_path,class:"blog title-bc hover-underline-animation" do %>
+              <em class='bx bx-list-check'></em>
+              saved Blogs
+              <% end %>
+                <%= link_to myblog_path,class:"blog title-bc hover-underline-animation" do %>
+                  <em class='bx bxs-user-circle'></em>
+                  my blogs
+                  <% end %>
   </div>
 </div>
-    
+</div>
+
+</div>
+                   <div class="container">
+
+  <div class="card-container">
+ <% check_user=SavedBlog.where(user_id: current_user.id) %>
+
+  <% check_user.each do |get_user| %>
+
+    <% @check_blog=get_user.blog_id %>
+      <% get_blog=Blog.where(id: @check_blog) %>
+
+        <% get_blog.each do |current_blog| %>
+    <div  class="card">
+      <a href="/blogs/<%= current_blog['id'] %>">
+   <%= image_tag current_blog.blogImage ,class:"card_image" if current_blog.blogImage.attached?%>
+    <div class="card__overlay">
+      <div class="card__header">
+        <div class="card__header-text">
+          <h3 class="card__title">
+             <%= current_blog.title %>
+          </h3>
+          <span class="card__lesson">
+          <% @name=User.find_by(id: current_blog.user_id)%>
+                    
+                     <p>  by <%= @name.Username%> </p>
+                      <p> posted on  <%= current_blog.created_at.to_date %></p>
+                   
+            </span>
+          </div>
+        </div>
+        <p class="card__description black">
+        <%= current_blog.content %>
+        </p>
+      </div>
+          </a>
+            <span class="nav-arrow">
+           
+
+      <%= link_to "deleteSavedBlog/#{get_user.id}" ,class: "save_blog red", method: :delete, data: { confirm: 'Are you sure?' } do %>
+               <em class='bx bxs-bookmark-minus'></em> <% end %>
+
+            </span>
+    </div>
+   
+    <% end %>
+    <% end %>
+  </div>
+</div>
